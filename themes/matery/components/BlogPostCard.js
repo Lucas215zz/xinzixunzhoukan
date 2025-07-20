@@ -43,12 +43,6 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 alt={post.title}
                 className='h-full w-full group-hover:scale-125 group-hover:brightness-50 rounded-t-md transform object-cover duration-500'
               />
-              <h2 className='absolute bottom-0 left-0 text-white p-6 text-2xl replace break-words w-full shadow-text z-30'>
-                {siteConfig('POST_TITLE_ICON') && (
-                  <NotionIcon icon={post.pageIcon} />
-                )}
-                {post.title}
-              </h2>
               {/* 放在图片的阴影遮罩，便于突出文字 */}
               <div className='h-1/2 w-full absolute left-0 bottom-0 z-20 opacity-75 transition-all duration-200'>
                 <div className='h-full w-full absolute bg-gradient-to-b from-transparent to-black'></div>
@@ -56,6 +50,16 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             </div>
           </Link>
         )}
+
+        {/* 封面下方标题 */}
+        <div className='w-full flex justify-center mt-2'>
+          <h2 className='text-2xl font-bold text-center text-gray-900 dark:text-white break-words w-full shadow-text'>
+            {siteConfig('POST_TITLE_ICON') && (
+              <NotionIcon icon={post.pageIcon} />
+            )}
+            {post.title?.slice(0, 20)}
+          </h2>
+        </div>
 
         {/* 文字描述 */}
         <main>

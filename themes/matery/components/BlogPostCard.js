@@ -53,7 +53,10 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
 
         {/* 封面下方标题 */}
         <div className='w-full flex justify-start mt-2'>
-          <h2 className='text-2xl font-bold text-left text-gray-900 dark:text-white break-words w-full line-clamp-2' style={{paddingLeft: '0.25em', textIndent: '0.25em'}}>
+          <h2
+            className='font-bold text-left break-words w-full line-clamp-2'
+            style={{ fontSize: '20px', color: '#333333', paddingLeft: '0.25em', paddingRight: '0.25em', textIndent: '0.25em' }}
+          >
             {siteConfig('POST_TITLE_ICON') && (
               <NotionIcon icon={post.pageIcon} />
             )}

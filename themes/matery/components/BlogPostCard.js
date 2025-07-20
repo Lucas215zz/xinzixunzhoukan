@@ -52,12 +52,12 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
         )}
 
         {/* 封面下方标题 */}
-        <div className='w-full flex justify-center mt-2'>
-          <h2 className='text-2xl font-bold text-center text-gray-900 dark:text-white break-words w-full shadow-text'>
+        <div className='w-full flex justify-start mt-2'>
+          <h2 className='text-2xl font-bold text-left text-gray-900 dark:text-white break-words w-full'>
             {siteConfig('POST_TITLE_ICON') && (
               <NotionIcon icon={post.pageIcon} />
             )}
-            {post.title?.slice(0, 20)}
+            {post.title?.slice(0, 30)}
           </h2>
         </div>
 

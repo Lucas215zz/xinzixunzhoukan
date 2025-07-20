@@ -36,9 +36,9 @@ export const Footer = props => {
           <span className='dark:text-gray-200 no-underline ml-4'>
             Powered by
             <a
-              href='https://github.com/tangly1024/NotionNext'
+              href='https://www.xinzixun.store/'
               className=' hover:underline'>
-              NotionNext {siteConfig('VERSION')}
+              新资讯周刊 4.8.3
             </a>
           </span>
         </div>

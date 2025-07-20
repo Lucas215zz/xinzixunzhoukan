@@ -53,8 +53,8 @@ const Hero = props => {
   return (
     <header
       id='header'
-      style={{ zIndex: 1 }}
-      className=' w-full h-screen relative bg-black'>
+      style={{ zIndex: 1, aspectRatio: '21/9' }}
+      className='w-full relative bg-black'>
       <div className='text-white absolute flex flex-col h-full items-center justify-center w-full '>
         {/* 站点标题 */}
         <div className='text-4xl md:text-5xl shadow-text'>
@@ -82,7 +82,7 @@ const Hero = props => {
         priority={true}
         id='header-cover'
         src={siteInfo?.pageCover}
-        className={`header-cover object-center w-full h-screen object-cover ${siteConfig('MATERY_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
+        className={`header-cover object-center w-full h-full object-cover ${siteConfig('MATERY_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
       />
     </header>
   )
